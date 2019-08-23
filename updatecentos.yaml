@@ -1,0 +1,6 @@
+---
+
+  - name: update the system Centos
+    yum:
+      name: "*"
+      state: latest
