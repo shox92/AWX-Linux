@@ -1,6 +1,6 @@
 ---
 - name: Debian-Update
-  hosts: apt-servers
+  hosts: all
   sudo: true
   tasks:
    - name: updates a server
