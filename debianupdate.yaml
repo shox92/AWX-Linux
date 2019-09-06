@@ -5,8 +5,10 @@
   tasks:
    - name: updates a server
      apt: update_cache=yes
+     register: result
    - name: upgrade a server
      apt: upgrade=dist
+   - debug: var=result
    - name: Check if a reboot is required
      register: file
      stat: path=/var/run/reboot-required get_md5=no
